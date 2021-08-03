@@ -8,6 +8,11 @@ Author URI:
 Version:1.7
 */
 
+body, p, a, li,
+.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5,
+.widget_text p {
+    font-family: "Shippori Mincho";
+}
 h1 {
     font-size: 4rem;
 }
@@ -24,11 +29,6 @@ a {
     text-decoration: none;
 }
 li {
-    font-family: "Shippori Mincho";
-    font-size: 1.8rem;
-}
-p.sg-font-forced {
-    font-family: "Shippori Mincho";
     font-size: 1.8rem;
 }
 p.bg-img {
@@ -48,11 +48,17 @@ img.sg-title {
     width: 300px;
 }
 div.sg-site-title {
-    width: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media (min-width: 500px) {
+
+    .sg-site-title img {
+        height: 90px;
+    }
 }
 
 ul.primary-menu {
