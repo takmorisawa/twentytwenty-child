@@ -82,45 +82,6 @@
 				<div class="header-navigation-wrapper">
 
 					<?php
-					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
-						?>
-
-							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'twentytwenty' ); ?>" role="navigation">
-
-								<ul class="primary-menu reset-list-style">
-
-								<?php
-								if ( has_nav_menu( 'primary' ) ) {
-
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
-
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
-
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,
-											'walker'   => new TwentyTwenty_Walker_Page(),
-										)
-									);
-
-								}
-								?>
-
-								</ul>
-
-							</nav><!-- .primary-menu-wrapper -->
-
-						<?php
-					}
-
 					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
 						?>
 
@@ -171,6 +132,13 @@
 
 				</div><!-- .header-navigation-wrapper -->
 
+				<div class="sg-site-title">
+				<?php
+				$title_image = '/wp-content/uploads/2021/08/title.png';
+				echo '<img src="' . home_url() . $title_image . '"/>';
+				?>
+				</div>
+
 			</div><!-- .header-inner -->
 
 			<?php
@@ -180,8 +148,53 @@
 			}
 			?>
 
+			<div>
+			<?php
+			if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
+				?>
+
+					<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'twentytwenty' ); ?>" role="navigation">
+
+						<ul class="primary-menu reset-list-style">
+
+						<?php
+						if ( has_nav_menu( 'primary' ) ) {
+
+							wp_nav_menu(
+								array(
+									'container'  => '',
+									'items_wrap' => '%3$s',
+									'theme_location' => 'primary',
+								)
+							);
+
+						} elseif ( ! has_nav_menu( 'expanded' ) ) {
+
+							wp_list_pages(
+								array(
+									'match_menu_classes' => true,
+									'show_sub_menu_icons' => true,
+									'title_li' => false,
+									'walker'   => new TwentyTwenty_Walker_Page(),
+								)
+							);
+
+						}
+						?>
+
+						</ul>
+
+					</nav><!-- .primary-menu-wrapper -->
+
+				<?php
+			}
+			?>
+			</div>
+
+
 		</header><!-- #site-header -->
 
 		<?php
 		// Output the menu modal.
 		get_template_part( 'template-parts/modal-menu' );
+
