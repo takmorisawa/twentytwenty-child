@@ -44,8 +44,8 @@ if ( is_singular() ) {
 
 		if ( is_singular() ) {
 			$title=the_title( '', '', false );
-			if (substr($title, 0, 1) == '/') {
-				echo '<img src="' . home_url() . $title . '" style="display: block; margin-left: auto; margin-right: auto; width: 400px;">';
+			if (substr($title, 0, 1) == '<') {
+				echo $title;
 			} else {
 				echo '<h1 class="entry-title">' . $title . '</h1>';
 			}
