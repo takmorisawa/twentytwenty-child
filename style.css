@@ -11,10 +11,23 @@ Version:1.7
 body, p, a, li,
 .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5,
 .widget_text p {
-    font-family: "Shippori Mincho";
+    /*font-family: "Shippori Mincho";*/
+    font-family: "教科書ICA M";
 }
+
+.singular .entry-header {
+    padding: 2rem 0;
+}
+@media (min-width: 700px) {
+    .singular .entry-header {
+        padding: 2rem 0;
+    }
+}
+
 h1 {
     font-size: 4rem;
+    height: 0px;
+    visibility: hidden;
 }
 h2 {
     font-size: 2.8rem;
@@ -27,6 +40,7 @@ p {
 }
 a {
     text-decoration: none;
+    color: #000000;
 }
 li {
     font-size: 1.8rem;
@@ -63,4 +77,33 @@ div.sg-site-title {
 
 ul.primary-menu {
     justify-content: center;
+}
+header nav {
+    background: #a8adcc;
+}
+.primary-menu  li {
+    margin: 0.8rem 0 0.2rem 8.2rem
+}
+.primary-menu  a {
+    font-family: "A_KSO Ginryu";
+    font-size: 2.2rem;
+}
+.primary-menu li.current-menu-item > a, .primary-menu li.current-menu-item > .link-icon-wrapper > a, .primary-menu a:hover {
+    text-decoration: none;
+    transition: none;
+    background-repeat: repeat-x;
+    background-size: 0.6em 0.2em,1.6em 0.2em,3.4em 0.2em,3.6em 0.2em;
+    background-position: right bottom;
+
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(10,10,10,0)), color-stop(0.1, rgba(246,89,115,0.02)), color-stop(0.5, rgba(10,10,10,1)), color-stop(0.98, rgba(10,10,10,0)), to(rgba(10,10,10,0)) );
+    background-image:
+            -webkit-radial-gradient(center center,0.2em 0.1em,rgba(10,10,10,1) 0,rgba(10,10,10,0) 0.1em,rgba(10,10,10,0) 0.2em),
+            -webkit-radial-gradient(center center,0.4em 0.1em,rgba(10,10,10,1) 0,rgba(10,10,10,0) 0.3em,rgba(10,10,10,0) 0.4em),
+            -webkit-radial-gradient(center center,0.7em 0.1em,rgba(10,10,10,1) 0,rgba(10,10,10,0) 0.6em,rgba(10,10,10,0) 0.7em),
+            -webkit-radial-gradient(center center,7.1em 0.1em,rgba(10,10,10,1) 0,rgba(10,10,10,0) 7em,rgba(10,10,10,0) 7.1em);
+    background-image:
+            radial-gradient(0.2em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
+            radial-gradient(0.4em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
+            radial-gradient(0.7em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
+            radial-gradient(7.1em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0));
 }
