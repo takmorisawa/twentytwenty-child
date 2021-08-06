@@ -18,6 +18,13 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
     font-family: "教科書ICA M";
 }
 
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 72rem;
+}
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 72rem;
+}
+
 .singular .entry-header {
     padding: 2rem 0;
 }
@@ -93,9 +100,6 @@ div.sg-site-title {
 .sg-monthly-shown {
     animation: fadeIn 2s ease 0s 1 normal;
 }
-.sg-monthly-shown h3 {
-    margin: 0;
-}
 .sg-monthly-shown div {
     margin: 0;
 }
@@ -111,6 +115,10 @@ div.sg-site-title {
     div.sg-site-title {
         top: 42%
     }
+}
+.sg-trim-honten img {
+    object-fit: cover;
+    height: 160px;
 }
 
 ul.primary-menu {

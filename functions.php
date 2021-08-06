@@ -26,6 +26,9 @@ function sg_add_typesquare_tag() {
         var next_month = day > (16 - 1) ? month + 1 : month;
         var targets = jQuery("div[class*=sg-monthly]");
         var spacer = jQuery(".sg-next-wagashi");
+        if (spacer.length == 0) {
+            return;
+        }
 
         target = jQuery(targets[next_month]).clone(true);
         target.appendTo(spacer);
