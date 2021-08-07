@@ -153,3 +153,10 @@ header nav {
             radial-gradient(0.7em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
             radial-gradient(7.1em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0));
 }
+
+.sg-lang-ja {
+    display: none;
+}
+.sg-lang-en {
+    display: none;
+}

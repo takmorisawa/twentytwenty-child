@@ -162,6 +162,7 @@
 
 							wp_nav_menu(
 								array(
+									'menu'  => get_query_var('lang') == 'en' ? 'main-en' : '',
 									'container'  => '',
 									'items_wrap' => '%3$s',
 									'theme_location' => 'primary',
