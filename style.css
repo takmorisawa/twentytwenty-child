@@ -8,14 +8,25 @@ Author URI:
 Version:1.7
 */
 
+@font-face {
+    font-family: "hannari";
+    src: url('./assets/font/hannari/HannariMincho-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./assets/font/hannari/HannariMincho-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/font/hannari/HannariMincho-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/font/hannari/HannariMincho-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         /*url('./assets/font/hannari/HannariMincho-Regular.ttf')  format('truetype'),*/ /* Safari, Android, iOS */
+         url('./assets/font/hannari/HannariMincho-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */}
+
 body, p, a, li,
 .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5,
 .widget_text p {
     /*font-family: "Shippori Mincho";*/
-    font-family: "教科書ICA M";
+    /*font-family: "教科書ICA M";*/
+    font-family: "Sawarabi Mincho";
+    /*font-family: "hannari";*/
 }
 input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-block-button__link, .wp-block-file__button {
-    font-family: "教科書ICA M";
+    font-family: "Sawarabi Mincho";
 }
 
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
@@ -46,7 +57,7 @@ h3 {
     font-size: 1.8rem;
 }
 p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 a {
     text-decoration: none;
@@ -125,16 +136,30 @@ ul.primary-menu {
     justify-content: center;
 }
 header nav {
-    background: #a8adcc;
+    background: #212222;
+    /*background: #a8adcc;*/
 }
 .primary-menu  li {
-    margin: 0.8rem 0 0.2rem 8.2rem
+    margin: 0;
+}
+.primary-menu li:hover {
+    background: white;
+    opacity: 0.66;
 }
 .primary-menu  a {
-    font-family: "A_KSO Ginryu";
+    /*font-family: "A_KSO Ginryu";*/
     font-size: 2.2rem;
+    color: white;
+    margin: 0.8rem 0 0.2rem 0;
+    border-left: 0.1rem solid white;
+    border-right: 0.1rem solid white;
+    padding: 0 3rem;
 }
-.primary-menu li.current-menu-item > a, .primary-menu li.current-menu-item > .link-icon-wrapper > a, .primary-menu a:hover {
+.primary-menu a:hover {
+    color: #212222;
+    text-decoration: none;
+}i
+/*.primary-menu li.current-menu-item > a, .primary-menu li.current-menu-item > .link-icon-wrapper > a, .primary-menu a:hover {
     text-decoration: none;
     transition: none;
     background-repeat: repeat-x;
@@ -152,7 +177,7 @@ header nav {
             radial-gradient(0.4em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
             radial-gradient(0.7em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0)),
             radial-gradient(7.1em 0.1em at center center,rgba(10,10,10,1),rgba(10,10,10,0));
-}
+}*/
 
 .sg-lang-ja {
     display: none;
