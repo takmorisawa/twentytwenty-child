@@ -57,7 +57,7 @@ function switchLanguage() {
     if (getParam()["lang"] == "en") {
         var targets = jQuery(".sg-lang-en");
         targets.each(function(index, elm) {
-            jQuery(elm).toggleClass("sg-lang-en sg-lang-ja-shown");
+            jQuery(elm).toggleClass("sg-lang-en sg-lang-en-shown");
         });
     }
     else {
