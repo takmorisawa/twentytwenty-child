@@ -29,7 +29,8 @@ function sg_insert_rewrite_rules($rules)
 }
 
 function sg_add_google_fonts() {
-   wp_register_style( 'googleFonts', 'https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+   /*wp_register_style( 'googleFonts', 'https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');*/
+   wp_register_style( 'googleFonts', 'https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
    wp_enqueue_style( 'googleFonts');
 }
 add_action( 'wp_enqueue_scripts', 'sg_add_google_fonts' );
@@ -39,6 +40,18 @@ function sg_add_javascripts() {
     echo '<script type="text/javascript" src="' . get_stylesheet_directory_uri () . '/assets/js/sg-customize.js" charset="utf-8"></script>';
 }
 add_action( 'wp_head', 'sg_add_javascripts' );
+
+function sg_redirect() {
+    $url = $_SERVER['HTTP_REFERER'];
+    $components = parse_url($url);
+    parse_str($components['query'], $results);
+    if ($results['lang'] == 'en' && $_GET['lang'] != 'en') {
+        echo $_SERVER['REQUEST_URI'];
+    }
+
+    //header('Location: https://moricreate.com/sogetsu/product-classic/#rikyu?lang=en');
+}
+//add_action( 'send_headers', 'sg_redirect' );
 
 function add_query_vars_filter( $vars ){
     $vars[] = "lang";
