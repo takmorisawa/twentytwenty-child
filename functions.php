@@ -66,4 +66,16 @@ function sg_switch_language() {
     }
 }
 
+function sg_nav_menu($atts) {
+return wp_nav_menu(
+    array(
+        'container'  => '',
+        'items_wrap' => '%3$s',
+        'menu' => $atts['menu'],
+        'echo' => false,
+    )
+);
+}
+add_shortcode('sg_nav_menu', 'sg_nav_menu');
+
 ?>

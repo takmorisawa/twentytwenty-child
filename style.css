@@ -5,7 +5,7 @@ Description:
 Template:twentytwenty
 Author:
 Author URI:
-Version:1.7.2
+Version:1.7
 */
 
 @font-face {
@@ -51,13 +51,12 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
 .wp-block-column {
     margin: 0;
 }
-@media (min-width: 700px)
-{
+@media (min-width: 700px) {
 .footer-widgets .widget {
     margin: 0;
 }
-@media (max-width: 700px)
 }
+@media (max-width: 700px) {
 .footer-widgets img {
     max-width: 200px;
 }
@@ -83,6 +82,9 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 }
+h2 + p {
+    margin-top: 3.5rem;
+}
 h3 {
     font-size: 1.8rem;
 }
@@ -90,8 +92,11 @@ p, li, a {
     font-size: 1.6rem;
 }
 a {
-    /*text-decoration: none;*/
-    /*color: #000000;*/
+    text-decoration: none;
+    color: #000000;
+}
+li {
+    list-style: none;
 }
 p.bg-img {
     width: 300px;
@@ -114,6 +119,45 @@ div.sg-site-title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.sg-columns {
+    margin-top: 0 !important;
+}
+.sg-columns .wp-block-column {
+    margin-left: 0 !important;
+}
+.sg-columns > .wp-block-column:first-child {
+    margin-top: 2rem;
+    padding-right: 2rem;
+}
+@media (max-width: 599px) {
+
+    .sg-columns > .wp-block-column:first-child {
+        display: none;
+    }
+}
+.sg-columns > .wp-block-column:first-child p {
+    border-bottom: 0.1rem solid black;
+}
+.sg-columns > .wp-block-column:first-child p:not(:first-child) {
+    margin-top: 2rem;
+}
+.sg-columns > .wp-block-column:first-child a {
+    color: black;
+}
+.sg-columns h2 {
+    margin: 0 !important;
+}
+.sg-columns > .wp-block-column:first-child a:after {
+    background-image: url(//moricreate.com/sogetsu/wp-content/uploads/2021/08/2464248.png);
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 0.5rem;
 }
 
 .sg-collabo-link img {
