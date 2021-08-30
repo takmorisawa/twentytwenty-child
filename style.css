@@ -48,8 +48,28 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
     padding: 0;
     border: none;
 }
+.wp-block-columns figure, .wp-block-columns .wp-block-image {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.wp-block-columns h3 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+}
 .wp-block-column {
     margin: 0;
+}
+.wp-block-group {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.wp-block-button {
+    margin-top: 0;
+}
+.wp-block-button a {
+    color: black !important;
+    background: white;
+    padding: 0;
 }
 @media (min-width: 700px) {
 .footer-widgets .widget {
@@ -82,8 +102,8 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 }
-h2 + p {
-    margin-top: 3.5rem;
+h2 + p, h2 + ul.sg-slideshow {
+    margin-top: 3.5rem !important;
 }
 h3 {
     font-size: 1.8rem;
@@ -149,7 +169,7 @@ div.sg-site-title {
 .sg-columns h2 {
     margin: 0 !important;
 }
-.sg-columns > .wp-block-column:first-child a:after {
+.sg-columns > .wp-block-column:first-child a:after, .wp-block-button__link:after {
     background-image: url(//moricreate.com/sogetsu/wp-content/uploads/2021/08/2464248.png);
     content: '';
     display: inline-block;
@@ -271,26 +291,26 @@ ul.sg-slideshow span.sg-dot-show::before {
     font-size: 1.1rem;
 }
 @keyframes fade1 {
-  0% {opacity: 1}
-  23% {opacity: 1}
-  33% {opacity: 0}
-  90% {opacity: 0}
-  100% {opacity: 1}
+    0% { opacity: 1; pointer-events: auto; }
+    23% { opacity: 1; pointer-events: auto; }
+    33% { opacity: 0; pointer-events: none; }
+    90% { opacity: 0; pointer-events: none; }
+    100% { opacity: 1 }
 }
 @keyframes fade2 {
-  0% {opacity: 0}
-  23% {opacity: 0}
-  33% {opacity: 1}
-  56% {opacity: 1}
-  66% {opacity: 0}
-  100% {opacity: 0}
+    0% {opacity: 0; pointer-events: none; }
+    23% { opacity: 0; pointer-events: none; }
+    33% { opacity: 1; pointer-events: auto; }
+    56% { opacity: 1; pointer-events: auto; }
+    66% { opacity: 0; pointer-events: none; }
+    100% { opacity: 0; pointer-events: none; }
 }
 @keyframes fade3 {
-  0% {opacity: 0}
-  56% {opacity: 0}
-  66% {opacity: 1}
-  90% {opacity: 1}
-  100% {opacity: 0}
+    0% { opacity: 0; pointer-events: none; }
+    56% { opacity: 0; pointer-events: none; }
+    66% { opacity: 1; pointer-events: auto; }
+    90% { opacity: 1; pointer-events: auto; }
+    100% { opacity: 0; pointer-events: none; }
 }
 #sg-slideshow-img1 {
     animation: fade1 20s ease 0s infinite normal;
