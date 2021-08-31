@@ -1,21 +1,18 @@
 function showNextWagashi() {
     var date = new Date();
     var month = date.getMonth();
-    var day = date.getDay();
-    var next_month = day > (16 - 1) ? month + 1 : month;
+    var date = date.getDate();
+    var next_month = date > 16 ? month + 1 : month;
     var targets = jQuery("div[class*=sg-monthly]");
-    var spacer = jQuery(".sg-next-wagashi");
-    if (spacer.length == 0) {
+    var space_holder = jQuery(".sg-next-wagashi");
+    if (space_holder.length == 0) {
         return;
     }
 
     target = jQuery(targets[next_month]).clone(true);
-    target.appendTo(spacer);
+    target.appendTo(space_holder);
 
     headers = jQuery(".sg-next-wagashi h3");
-    var header= jQuery(headers[0]);
-    var title = header.text();
-    header.text(title.replace("%s", String(month + 1)));
     headers[1].remove();
 }
 

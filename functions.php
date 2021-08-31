@@ -66,6 +66,8 @@ function sg_switch_language() {
     }
 }
 
+
+// short code
 function sg_nav_menu($atts) {
 return wp_nav_menu(
     array(
@@ -77,5 +79,12 @@ return wp_nav_menu(
 );
 }
 add_shortcode('sg_nav_menu', 'sg_nav_menu');
+
+function sg_next_month() {
+    $month = date('n');
+    $date = date('j');
+    return $date <= 16 ? $month : $month + 1;
+};
+add_shortcode('sg_next_month', 'sg_next_month');
 
 ?>
