@@ -44,25 +44,60 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
 .footer-nav-widgets-wrapper {
     margin: 0 !important;
 }
+.column-two .wp-block-column {
+    margin-bottom: 0;
+}
+.footer-nav-widgets-wrapper li {
+    border: solid gray 0.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+}
+.footer-nav-widgets-wrapper li:hover {
+    background: linear-gradient(0deg, #212222, #555555, #212222);
+    color: white;
+}
+.footer-nav-widgets-wrapper a {
+    color: inherit;
+}
 .footer-widgets-outer-wrapper {
     padding: 0;
     border: none;
 }
+@media (min-width: 700px) {
+
+    .footer-widgets .widget {
+        margin: 0;
+    }
+}
+@media (max-width: 700px) {
+
+    .footer-widgets img {
+        max-width: 200px;
+    }
+}
+#site-footer {
+    color: gray;
+    padding: 1.5rem 0;
+}
+
+/* column */
 .wp-block-columns figure, .wp-block-columns .wp-block-image {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 .wp-block-columns h3 {
-    margin-top: 0 !important;
-    margin-bottom: 1rem !important;
+    /*margin-top: 0 !important;*/
+    /*margin-bottom: 1rem !important;*/
 }
-.wp-block-column {
-    margin: 0;
-}
+
+/* group */
 .wp-block-group {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+
+/* button */
 .wp-block-button {
     margin-top: 0;
 }
@@ -71,18 +106,10 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
     background: white;
     padding: 0;
 }
-@media (min-width: 700px) {
-.footer-widgets .widget {
-    margin: 0;
-}
-}
-@media (max-width: 700px) {
-.footer-widgets img {
-    max-width: 200px;
-}
-}
-#site-footer {
-    padding: 1.5rem 0;
+
+.wp-block-media-text__content {
+    padding: 1rem !important;
+    margin: 0 !important;
 }
 
 main {
@@ -95,7 +122,6 @@ h1 {
 }
 h2 {
     font-size: 2rem;
-    //border-bottom: 0.1rem solid black;
     background-image: url(//moricreate.com/sogetsu/wp-content/uploads/2021/08/washi_fuji.jpg);
     background-position: 0 2.5rem;
     padding: 1rem 0;
@@ -112,13 +138,19 @@ p, li, a {
     font-size: 1.6rem;
 }
 a {
-    text-decoration: none;
     color: #000000;
+}
+a, a:hover, a:focus {
+    text-decoration: none !important;
 }
 li {
     list-style: none;
 }
-p.bg-img {
+hr {
+    margin: 3rem 0 !important;
+}
+
+/*p.bg-img {
     width: 300px;
     text-align: right;
     vertical-align: bottom;
@@ -127,13 +159,13 @@ p.bg-img {
     font-size: 18px;
     background-size: cover;
     background-position: center center;
-}
-img.sg-title {
+}*/
+/*img.sg-title {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-}
+}*/
 div.sg-site-title {
     position: absolute;
     top: 50%;
@@ -141,10 +173,11 @@ div.sg-site-title {
     transform: translate(-50%, -50%);
 }
 
+/* side menu */
 .sg-columns {
     margin-top: 0 !important;
 }
-.sg-columns .wp-block-column {
+.sg-columns > .wp-block-column {
     margin-left: 0 !important;
 }
 .sg-columns > .wp-block-column:first-child {
@@ -180,13 +213,19 @@ div.sg-site-title {
     margin-left: 0.5rem;
 }
 
+.sg-product {
+    /*height: calc(100% - 1rem);*/
+    display: block;
+    text-align: center;
+    border: solid 0.1rem gray;
+}
+
 .sg-collabo-link img {
-    width: 100px;
-    float: left;
+    width: 70px;
+    margin: 0 auto;
 }
 .sg-collabo-link div {
-    float: left;
-    margin: 0 0 0 10px;
+    align-text: center;
 }
 .sg-collabo-link p {
     text-align: center;
@@ -203,7 +242,7 @@ div.sg-site-title {
     animation: fadeIn 2s ease 0s 1 normal;
 }
 .sg-monthly-shown div {
-    margin: 0;
+    margin: 0 0 4rem 0;
 }
 
 @media (min-width: 500px) {
@@ -223,12 +262,19 @@ div.sg-site-title {
     height: 160px;
 }
 
+@media (min-width: 1000px) {
+
+    .header-titles .site-title, .header-titles .site-logo, .header-titles .site-description {
+        margin: 1rem 0 0 1rem;
+    }
+}
+
+/* primary menu */
 ul.primary-menu {
     justify-content: center;
 }
 header nav {
-    background: #212222;
-    /*background: #a8adcc;*/
+    background: linear-gradient(0deg, #212222, #555555, #212222);
 }
 .primary-menu  li {
     margin: 0;
@@ -238,7 +284,6 @@ header nav {
     opacity: 0.66;
 }
 .primary-menu a {
-    /*font-family: "A_KSO Ginryu";*/
     color: white;
     margin: 0.8rem 0 0.2rem 0;
     border-left: 0.1rem solid white;
@@ -249,7 +294,6 @@ header nav {
 }
 .primary-menu a:hover {
     color: #212222;
-    text-decoration: none;
 }
 
 /* multi language */
