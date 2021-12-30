@@ -2,11 +2,16 @@ function showNextWagashi() {
     var date = new Date();
     var month = date.getMonth();
     var date = date.getDate();
-    var next_month = date > 16 ? month + 1 : month;
+    var next_month = date > 16 ? month + 1 : month;  /* after 16 day, go to next month */
     var targets = jQuery("div[class*=sg-monthly]");
     var space_holder = jQuery(".sg-next-wagashi");
     if (space_holder.length == 0) {
         return;
+    }
+    /* Guard for next_month */
+    if( next_month > 12)
+    {
+        next_month = 1;
     }
 
     target = jQuery(targets[next_month]).clone(true);
