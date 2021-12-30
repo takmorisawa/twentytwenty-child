@@ -80,10 +80,23 @@ return wp_nav_menu(
 }
 add_shortcode('sg_nav_menu', 'sg_nav_menu');
 
+/**
+ * @brief Calc next month for Kashinohi
+ */
 function sg_next_month() {
     $month = date('n');
     $date = date('j');
-    return $date <= 16 ? $month : $month + 1;
+    /* Judge over 16 day */
+    if( $date > 16 )
+    {
+        $month += 1;
+    }
+    /* Over 12 mon, next is 1 mon*/
+    if( $month > 12)
+    {
+        $month = 1;
+    }
+    return $month;
 };
 add_shortcode('sg_next_month', 'sg_next_month');
 

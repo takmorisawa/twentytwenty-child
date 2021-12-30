@@ -122,7 +122,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
-    background-image: url(//moricreate.com/sogetsu/wp-content/uploads/2021/08/washi_fuji.jpg);
+    background-image: url(../../wp-content/uploads/2021/08/washi_fuji.jpg);
     background-position: 0 2.5rem;
     padding: 1rem 0;
     background-repeat: no-repeat;
@@ -203,7 +203,7 @@ div.sg-site-title {
     margin: 0 !important;
 }
 .sg-columns > .wp-block-column:first-child a:after, .wp-block-button__link:after {
-    background-image: url(../../wp-content/uploads/2021/08/2464248.png);
+    /*background-image: url(../../wp-content/uploads/2021/08/2464248.png);*/
     content: '';
     display: inline-block;
     width: 10px;
