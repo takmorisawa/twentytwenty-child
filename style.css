@@ -8,7 +8,11 @@ Author URI:
 Version:1.7
 */
 
-/** Common Class **/
+
+/** 
+* Define Common At-Rule
+**/
+
 @font-face {
     font-family: "hannari";
     src: url('./assets/font/hannari/HannariMincho-Regular.eot'); /* IE9 Compat Modes */
@@ -17,6 +21,39 @@ Version:1.7
          url('./assets/font/hannari/HannariMincho-Regular.woff') format('woff'), /* Pretty Modern Browsers */
          /*url('./assets/font/hannari/HannariMincho-Regular.ttf')  format('truetype'),*/ /* Safari, Android, iOS */
          url('./assets/font/hannari/HannariMincho-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes fade1 {
+    0% { opacity: 1; pointer-events: auto; }
+    23% { opacity: 1; pointer-events: auto; }
+    33% { opacity: 0; pointer-events: none; }
+    90% { opacity: 0; pointer-events: none; }
+    100% { opacity: 1 }
+}
+@keyframes fade2 {
+    0% {opacity: 0; pointer-events: none; }
+    23% { opacity: 0; pointer-events: none; }
+    33% { opacity: 1; pointer-events: auto; }
+    56% { opacity: 1; pointer-events: auto; }
+    66% { opacity: 0; pointer-events: none; }
+    100% { opacity: 0; pointer-events: none; }
+}
+@keyframes fade3 {
+    0% { opacity: 0; pointer-events: none; }
+    56% { opacity: 0; pointer-events: none; }
+    66% { opacity: 1; pointer-events: auto; }
+    90% { opacity: 1; pointer-events: auto; }
+    100% { opacity: 0; pointer-events: none; }
+}
+
+
+/**
+* Common Class
+**/
 
 body, p, a, li,
 .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5,
@@ -52,7 +89,15 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
     background-size: cover;
 }
 
-/** Footer Class **/
+.com-fadein {
+  /* fade in sentence */
+  animation: fadeIn 2s ease 0s 1 normal;
+}
+
+
+/**
+* Footer Class 
+**/
 .footer-nav-widgets-wrapper {
     margin: 0 !important;
 }
@@ -196,8 +241,8 @@ div.sg-site-title {
     margin-top: 2rem;
     padding-right: 2rem;
 }
-@media (max-width: 599px) {
-
+@media (max-width: 599px) 
+{
     .sg-columns > .wp-block-column:first-child {
         display: none;
     }
@@ -243,10 +288,6 @@ div.sg-site-title {
     text-align: center;
 }
 
-@keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
-}
 .sg-monthly {
     opacity: 0;
 }
@@ -346,28 +387,7 @@ ul.sg-slideshow span.sg-dot-show::before {
     content: "●";
     font-size: 1.1rem;
 }
-@keyframes fade1 {
-    0% { opacity: 1; pointer-events: auto; }
-    23% { opacity: 1; pointer-events: auto; }
-    33% { opacity: 0; pointer-events: none; }
-    90% { opacity: 0; pointer-events: none; }
-    100% { opacity: 1 }
-}
-@keyframes fade2 {
-    0% {opacity: 0; pointer-events: none; }
-    23% { opacity: 0; pointer-events: none; }
-    33% { opacity: 1; pointer-events: auto; }
-    56% { opacity: 1; pointer-events: auto; }
-    66% { opacity: 0; pointer-events: none; }
-    100% { opacity: 0; pointer-events: none; }
-}
-@keyframes fade3 {
-    0% { opacity: 0; pointer-events: none; }
-    56% { opacity: 0; pointer-events: none; }
-    66% { opacity: 1; pointer-events: auto; }
-    90% { opacity: 1; pointer-events: auto; }
-    100% { opacity: 0; pointer-events: none; }
-}
+/* slideshow image */
 #sg-slideshow-img1 {
     animation: fade1 20s ease 0s infinite normal;
 }
