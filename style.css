@@ -8,6 +8,7 @@ Author URI:
 Version:1.7
 */
 
+/** Common Class **/
 @font-face {
     font-family: "hannari";
     src: url('./assets/font/hannari/HannariMincho-Regular.eot'); /* IE9 Compat Modes */
@@ -25,6 +26,7 @@ body, p, a, li,
     font-family: "Sawarabi Mincho";
     /*font-family: "hannari";*/
 }
+
 input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-block-button__link, .wp-block-file__button {
     font-family: "Sawarabi Mincho";
 }
@@ -40,7 +42,17 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
     display: none;
 }
 
-/* footer */
+.com-chapter {
+  /* 章題 */
+    font-size: 2rem;
+    background-image: url(../../wp-content/uploads/2021/08/washi_fuji.jpg);
+    background-position: 0 2.5rem;
+    padding: 1rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** Footer Class **/
 .footer-nav-widgets-wrapper {
     margin: 0 !important;
 }
