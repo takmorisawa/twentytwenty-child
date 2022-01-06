@@ -82,7 +82,7 @@ input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-bloc
 .com-chapter {
   /* 章題 */
     font-size: 2rem;
-    background-image: url(../../wp-content/uploads/2021/08/washi_fuji.jpg);
+    background-image: url('../../wp-content/uploads/2021/08/washi_fuji.jpg');
     background-position: 0 2.5rem;
     padding: 1rem 0;
     background-repeat: no-repeat;
@@ -179,7 +179,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
-    background-image: url(../../wp-content/uploads/2021/08/washi_fuji.jpg);
+    background-image: url('../../wp-content/uploads/2021/08/washi_fuji.jpg');
     background-position: 0 2.5rem;
     padding: 1rem 0;
     background-repeat: no-repeat;
